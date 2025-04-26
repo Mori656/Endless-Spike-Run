@@ -17,11 +17,15 @@ public class SegmentGenerator : MonoBehaviour
     void Start(){
         int i = 0;
         while(i < numberOfSegment){
-            int rSegment = UnityEngine.Random.Range(0,segmentPrefab.Length);
+            int rSegment = UnityEngine.Random.Range(0,segmentPrefab.Length-1);
             newSegmentPosition = new Vector3(transform.position.x + 10*i,transform.position.y,transform.position.z);
             newSegment = Instantiate(segmentPrefab[rSegment], newSegmentPosition, transform.rotation);
             poolOfSegments.Add(newSegment); 
+
+            newSegmentPosition = new Vector3(transform.position.x + 10*i,transform.position.y,transform.position.z + 20);
+            newSegment = Instantiate(segmentPrefab[rSegment], newSegmentPosition, transform.rotation);
             usableSegments.Add(newSegment);
+
             i++;
         }
     }
@@ -30,8 +34,8 @@ public class SegmentGenerator : MonoBehaviour
     {
         if(usableSegments.Count > 3){
             int rSegment = UnityEngine.Random.Range(0,usableSegments.Count); 
-            newSegmentPosition = new Vector3(10*numberOfSegment,0,0);
-            usableSegments[rSegment].transform.position += newSegmentPosition;
+            newSegmentPosition = new Vector3(transform.position.x + 10*numberOfSegment,transform.position.y,transform.position.z);
+            usableSegments[rSegment].transform.position = newSegmentPosition;
             usableSegments.RemoveAt(rSegment);
         }
         
