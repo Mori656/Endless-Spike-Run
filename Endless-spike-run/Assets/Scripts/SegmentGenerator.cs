@@ -1,64 +1,91 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 
 public class SegmentGenerator : MonoBehaviour
 {
     public GameObject[] segmentPrefab;
     public GameObject spikesPrefab;
-    private static int numberOfSegment = 5;
-    private List<GameObject> poolOfSegments = new List<GameObject>();
-    private List<GameObject> usableSegments = new List<GameObject>();
     
-    private GameObject newSegment, newspike;
+    private static int numberOfSegments = 10;
+    private List<GameObject> usableSegments = new List<GameObject>();
+    private List<GameObject> poolOfSegments;
+
+    public string uniqueID;
+
+    private GameObject newSegment, newSpike;
     private Vector3 newSegmentPosition, spikeMove, spikePosition;
-    // Start is called before the first frame update
 
-    void Start(){
-        int i = 0;
-        while(i < numberOfSegment){
-            int rSegment = UnityEngine.Random.Range(0,segmentPrefab.Length);
-            newSegmentPosition = new Vector3(transform.position.x - 10*i,transform.position.y,transform.position.z);
+    void Start()
+    {
+        poolOfSegments = new List<GameObject>();
+        for (int i = 0; i < numberOfSegments; i++)
+        {
+            int rSegment = UnityEngine.Random.Range(0, segmentPrefab.Length);
+            
+            // Tworzenie segmentu
+            newSegmentPosition = new Vector3(transform.position.x - 10 * i, transform.position.y, transform.position.z);
             newSegment = Instantiate(segmentPrefab[rSegment], newSegmentPosition, transform.rotation);
-            poolOfSegments.Add(newSegment); 
+            Segment segmentInfo = newSegment.AddComponent<Segment>();
+            segmentInfo.uniqueID = Guid.NewGuid().ToString();
+            poolOfSegments.Add(newSegment);
 
-            newSegmentPosition = new Vector3(transform.position.x - 10*i,transform.position.y,transform.position.z + 20);
+            // Tworzenie segmentu do użytku
+            newSegmentPosition = new Vector3(transform.position.x - 10 * i, transform.position.y, transform.position.z + 20);
             newSegment = Instantiate(segmentPrefab[rSegment], newSegmentPosition, transform.rotation);
+            segmentInfo = newSegment.AddComponent<Segment>();
+            segmentInfo.uniqueID = Guid.NewGuid().ToString();
+            poolOfSegments.Add(newSegment);
             usableSegments.Add(newSegment);
-
-            i++;
         }
+
+        // Tworzenie kolca
         spikePosition = new Vector3(transform.position.x + 5, transform.position.y, transform.position.z);
-        newspike = Instantiate(spikesPrefab,spikePosition,transform.rotation);
-        spikeMove = new Vector3(-1,0,0);
+        newSpike = Instantiate(spikesPrefab, spikePosition, transform.rotation);
+        spikeMove = new Vector3(-3, 0, 0);
     }
 
     void Update()
-    { 
-        moveSpikeForward();
+    {
+        MoveSpikeForward();
     }
 
     private void OnTriggerEnter(Collider other)
     {
-        if(usableSegments.Count > 3){
-            int rSegment = UnityEngine.Random.Range(0,usableSegments.Count); 
-            newSegmentPosition = new Vector3(transform.position.x - 10*numberOfSegment,transform.position.y,transform.position.z);
-            usableSegments[rSegment].transform.position = newSegmentPosition;
-            usableSegments.RemoveAt(rSegment);
+        if (other.CompareTag("Player"))
+        {
+            if (usableSegments.Count > 0)
+            {
+                int rSegment = UnityEngine.Random.Range(0, usableSegments.Count);
+                GameObject selectedSegment = usableSegments[rSegment];
+
+                newSegmentPosition = new Vector3(transform.position.x - 10 * numberOfSegments, transform.position.y, transform.position.z);
+                selectedSegment.transform.position = newSegmentPosition;
+
+                usableSegments.RemoveAt(rSegment); // Usuwamy segment z listy po użyciu
+            }
+            else
+            {
+                Debug.LogWarning("Brak dostępnych segmentów do użycia!");
+            }
+
+            transform.position += new Vector3(-10, 0, 0);
         }
-        
-
-        transform.position += new Vector3(-10,0,0);
-        Debug.Log("triger work");
     }
 
-    private void moveSpikeForward(){
-        newspike.transform.position += spikeMove * Time.deltaTime;   
+    private void MoveSpikeForward()
+    {
+        newSpike.transform.position += spikeMove * Time.deltaTime;
     }
 
-    public void addToUsable(GameObject segment){
-        usableSegments.Add(segment);
+    public void addToUsable(string segmentID)
+    {
+        foreach(GameObject seg in poolOfSegments){
+            Segment segtScript = seg.GetComponent<Segment>();
+            if(segtScript.uniqueID == segmentID){
+                break;
+            }
+        }
     }
 }

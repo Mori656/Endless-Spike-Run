@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 6982718826787297731}
   - component: {fileID: 6982718826787297730}
   - component: {fileID: 6982718826787297733}
-  - component: {fileID: 6982718826787297728}
+  - component: {fileID: 3987538940724254946}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -85,7 +85,7 @@ AudioListener:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6982718826787297732}
   m_Enabled: 1
---- !u!114 &6982718826787297728
+--- !u!114 &3987538940724254946
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -94,10 +94,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 6982718826787297732}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 21619fe0da5343b479b26be3161b88c2, type: 3}
+  m_Script: {fileID: 11500000, guid: 414d9fb3d623a2e4aacedc96a005c155, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mouseSensitivity: 500
+  mouseSensitivity: 100
   playerBody: {fileID: 6982718826880823768}
 --- !u!1 &6982718826880823772
 GameObject:
@@ -111,11 +111,11 @@ GameObject:
   - component: {fileID: 6982718826880823771}
   - component: {fileID: 6982718826880823770}
   - component: {fileID: 6982718826880823773}
-  - component: {fileID: 6982718826880823769}
   - component: {fileID: 6982718826880823766}
+  - component: {fileID: 3987538940724254945}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -127,15 +127,15 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6982718826880823772}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -12.83, y: 1.8150516, z: -1}
+  m_LocalRotation: {x: 0, y: 0.7071068, z: -0, w: -0.7071068}
+  m_LocalPosition: {x: 0, y: 2, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 6982718826787297731}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!33 &6982718826880823771
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -204,31 +204,6 @@ CharacterController:
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &6982718826880823769
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6982718826880823772}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2304e170d7aca3542ad2cc1c89ad4817, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  walkSpeed: 5
-  runSpeed: 8
-  acceleration: 5
-  jumpForce: 1
-  gravity: -9.81
-  slideSpeed: 10
-  slideDuration: 0.7
-  footstepsClip: {fileID: 8300000, guid: 3c1c2718afae4b04da812231c5241051, type: 3}
-  jumpClip: {fileID: 8300000, guid: da4aa40a3633b9f4381f1dbd1b567a48, type: 3}
-  slideClip: {fileID: 8300000, guid: 6ffc49e4c992ee645b5ed38f118774f6, type: 3}
-  walkStepRate: 0.2
-  runStepRate: 0.05
-  slideHeight: 1
 --- !u!82 &6982718826880823766
 AudioSource:
   m_ObjectHideFlags: 0
@@ -325,3 +300,28 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &3987538940724254945
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6982718826880823772}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04dc07d89ac9b3e45bd96bdf4177a545, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  walkSpeed: 5
+  runSpeed: 10
+  acceleration: 5
+  jumpForce: 2
+  gravity: -20
+  slideSpeed: 30
+  slideDuration: 1
+  footstepsClip: {fileID: 8300000, guid: 3c1c2718afae4b04da812231c5241051, type: 3}
+  jumpClip: {fileID: 8300000, guid: da4aa40a3633b9f4381f1dbd1b567a48, type: 3}
+  slideClip: {fileID: 8300000, guid: 6ffc49e4c992ee645b5ed38f118774f6, type: 3}
+  walkStepRate: 0.5
+  runStepRate: 0.2
+  slideHeight: 0.05

@@ -1464,6 +1464,7 @@ GameObject:
   - component: {fileID: 5179503643731540753}
   - component: {fileID: 214223955862358385}
   - component: {fileID: 344804317098814723}
+  - component: {fileID: 6987406272733377657}
   m_Layer: 0
   m_Name: Segment Recycler
   m_TagString: Untagged
@@ -1511,7 +1512,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e02e21446e0d019468c98cc5b21b27c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SegGen: {fileID: 0}
+  SegGen: {fileID: 2396226099982999823, guid: 5fc106d3e558e8f49a4225224252d4fa, type: 3}
+--- !u!54 &6987406272733377657
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4094596952706035787}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &4537354486523430033
 GameObject:
   m_ObjectHideFlags: 0
