@@ -184,6 +184,7 @@ MonoBehaviour:
   - {fileID: 7429775279315167546, guid: b5a788f6d48edc94da50c05c91e1f7f0, type: 3}
   - {fileID: 8750844276665648212, guid: fbd22e1caac2c85479b9750b9211ed0c, type: 3}
   - {fileID: 680289669691325636, guid: fd373617b7f34fa488c2c83d5e424ae0, type: 3}
+  spikesPrefab: {fileID: 6167209938208029268, guid: 162aa94e58ef3d94ea2a0d116099b991, type: 3}
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -303,7 +304,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6982718826880823768, guid: 288d32339b50f8a40839c4f160c9e582, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.7071068
+      value: -0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: 6982718826880823768, guid: 288d32339b50f8a40839c4f160c9e582, type: 3}
       propertyPath: m_LocalRotation.x
@@ -315,7 +316,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6982718826880823768, guid: 288d32339b50f8a40839c4f160c9e582, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 6982718826880823768, guid: 288d32339b50f8a40839c4f160c9e582, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -332,6 +333,10 @@ PrefabInstance:
     - target: {fileID: 6982718826880823772, guid: 288d32339b50f8a40839c4f160c9e582, type: 3}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 6982718826880823773, guid: 288d32339b50f8a40839c4f160c9e582, type: 3}
+      propertyPath: m_StepOffset
+      value: 0.3
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 6982718826880823769, guid: 288d32339b50f8a40839c4f160c9e582, type: 3}
@@ -359,18 +364,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 04dc07d89ac9b3e45bd96bdf4177a545, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  walkSpeed: 5
-  runSpeed: 8
+  walkSpeed: 7
+  runSpeed: 10
   acceleration: 5
-  jumpForce: 1
-  gravity: -9.81
-  slideSpeed: 10
-  slideDuration: 0.7
+  jumpForce: 2
+  gravity: -20
+  slideSpeed: 30
+  slideDuration: 1
   footstepsClip: {fileID: 8300000, guid: 3c1c2718afae4b04da812231c5241051, type: 3}
   jumpClip: {fileID: 8300000, guid: da4aa40a3633b9f4381f1dbd1b567a48, type: 3}
   slideClip: {fileID: 8300000, guid: 6ffc49e4c992ee645b5ed38f118774f6, type: 3}
-  walkStepRate: 0.2
-  runStepRate: 0.05
+  walkStepRate: 0.5
+  runStepRate: 0.2
   slideHeight: 1
 --- !u!114 &1600097306
 MonoBehaviour:
