@@ -699,6 +699,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3437444397163551280}
   - component: {fileID: 7605245340946298220}
+  - component: {fileID: 6404559676776983901}
   m_Layer: 0
   m_Name: chair
   m_TagString: Untagged
@@ -741,6 +742,19 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 0}
+--- !u!65 &6404559676776983901
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1423095549441672446}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.57189894, y: 0.9315933, z: 0.5395676}
+  m_Center: {x: -0.008718745, y: 0.4926818, z: 0.0021828113}
 --- !u!1 &1829528885207863785
 GameObject:
   m_ObjectHideFlags: 0
@@ -1447,6 +1461,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2201857475209022720}
   - component: {fileID: 1052486954582175256}
+  - component: {fileID: 2377836989761460382}
   m_Layer: 0
   m_Name: table with drawers
   m_TagString: Untagged
@@ -1488,6 +1503,19 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 0}
+--- !u!65 &2377836989761460382
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2661823876689008089}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.85, y: 1.0922095, z: 1.4}
+  m_Center: {x: 0, y: 0.46577257, z: 0}
 --- !u!1 &2721261975605995626
 GameObject:
   m_ObjectHideFlags: 0
@@ -1498,6 +1526,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3352945271959302864}
   - component: {fileID: 8605075887640659559}
+  - component: {fileID: 602820020388565463}
   m_Layer: 0
   m_Name: water Shelf
   m_TagString: Untagged
@@ -1536,6 +1565,19 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 0}
+--- !u!65 &602820020388565463
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2721261975605995626}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.0727715, y: 0.30623037, z: 1}
+  m_Center: {x: 0.0010015965, y: 0.0026117265, z: 0}
 --- !u!1 &3005759212141217132
 GameObject:
   m_ObjectHideFlags: 0
@@ -5451,7 +5493,7 @@ GameObject:
   - component: {fileID: 7429775279315167545}
   m_Layer: 0
   m_Name: Room 1
-  m_TagString: Untagged
+  m_TagString: Room
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5651,6 +5693,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7130933916817260433}
   - component: {fileID: 6052980776904587981}
+  - component: {fileID: 2004346960366844467}
   m_Layer: 0
   m_Name: chair
   m_TagString: Untagged
@@ -5693,6 +5736,19 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 0}
+--- !u!65 &2004346960366844467
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7619521233714750763}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.59701884, y: 0.958688, z: 0.5073321}
+  m_Center: {x: 0.0005118847, y: 0.46361828, z: -0.0054980516}
 --- !u!1 &7625388184528669101
 GameObject:
   m_ObjectHideFlags: 0
@@ -5819,6 +5875,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7469550522820234003}
   - component: {fileID: -3161635630272732588}
+  - component: {fileID: 8293748660106596045}
   m_Layer: 0
   m_Name: table with drawers
   m_TagString: Untagged
@@ -5860,6 +5917,19 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 0}
+--- !u!65 &8293748660106596045
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7846110631755829673}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.85, y: 1.0907087, z: 1.4}
+  m_Center: {x: -0, y: 0.46402562, z: 0}
 --- !u!1 &7889796355798101758
 GameObject:
   m_ObjectHideFlags: 0
