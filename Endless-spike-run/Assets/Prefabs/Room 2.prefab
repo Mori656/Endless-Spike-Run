@@ -291,6 +291,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3593488457603921758}
   - component: {fileID: 8638363229902985218}
+  - component: {fileID: 4922493766426112692}
   m_Layer: 0
   m_Name: chair
   m_TagString: Untagged
@@ -333,6 +334,19 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 0}
+--- !u!65 &4922493766426112692
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 996766792217831824}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.57203066, y: 0.916669, z: 0.48614898}
+  m_Center: {x: -0.0144930035, y: 0.4914825, z: -0.0069383834}
 --- !u!1 &1333682699153188469
 GameObject:
   m_ObjectHideFlags: 0
@@ -2358,6 +2372,7 @@ GameObject:
   m_Component:
   - component: {fileID: 64302137772531822}
   - component: {fileID: 1220981884746449782}
+  - component: {fileID: 5506417246336221915}
   m_Layer: 0
   m_Name: table with drawers
   m_TagString: Untagged
@@ -2399,6 +2414,19 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 0}
+--- !u!65 &5506417246336221915
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4222777174561011895}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.85, y: 1, z: 1.4}
+  m_Center: {x: 0, y: 0.5, z: 0}
 --- !u!1 &4227434328033354828
 GameObject:
   m_ObjectHideFlags: 0
@@ -2492,6 +2520,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3522639768910307262}
   - component: {fileID: 7566536848118147849}
+  - component: {fileID: 5909405809699347328}
   m_Layer: 0
   m_Name: water Shelf
   m_TagString: Untagged
@@ -2530,6 +2559,19 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 0}
+--- !u!65 &5909405809699347328
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4299036143386641668}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.0757227, y: 0.30546534, z: 1}
+  m_Center: {x: -0.0015149117, y: 0.000090658665, z: 0}
 --- !u!1 &4326924766642792870
 GameObject:
   m_ObjectHideFlags: 0
@@ -5357,6 +5399,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8774084514691229309}
   - component: {fileID: 5365334049798065978}
+  - component: {fileID: 1487286088207035945}
   m_Layer: 0
   m_Name: table with drawers
   m_TagString: Untagged
@@ -5398,6 +5441,19 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 0}
+--- !u!65 &1487286088207035945
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8252881285133728967}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.85, y: 1, z: 1.4}
+  m_Center: {x: 0, y: 0.5, z: 0}
 --- !u!1 &8276589291065330730
 GameObject:
   m_ObjectHideFlags: 0
@@ -5807,6 +5863,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8979273157186212607}
   - component: {fileID: 5362206278599825315}
+  - component: {fileID: 1358061956306879884}
   m_Layer: 0
   m_Name: chair
   m_TagString: Untagged
@@ -5849,6 +5906,19 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 0}
+--- !u!65 &1358061956306879884
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8635399329658996805}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.58585167, y: 0.90212, z: 0.50560904}
+  m_Center: {x: -0.0025672913, y: 0.48381728, z: -0.01218009}
 --- !u!1 &8750844275618279706
 GameObject:
   m_ObjectHideFlags: 0
@@ -6248,7 +6318,7 @@ GameObject:
   - component: {fileID: 8750844276665648215}
   m_Layer: 0
   m_Name: Room 2
-  m_TagString: Untagged
+  m_TagString: Room
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

@@ -17,7 +17,7 @@ public class SegmentGenerator : MonoBehaviour
     void Start(){
         int i = 0;
         while(i < numberOfSegment){
-            int rSegment = UnityEngine.Random.Range(0,segmentPrefab.Length-1);
+            int rSegment = UnityEngine.Random.Range(0,segmentPrefab.Length);
             newSegmentPosition = new Vector3(transform.position.x + 10*i,transform.position.y,transform.position.z);
             newSegment = Instantiate(segmentPrefab[rSegment], newSegmentPosition, transform.rotation);
             poolOfSegments.Add(newSegment); 
