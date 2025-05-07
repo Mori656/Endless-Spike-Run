@@ -41,9 +41,9 @@ public class SegmentGenerator : MonoBehaviour
         }
 
         // Tworzenie kolca
-        spikePosition = new Vector3(transform.position.x + 5, transform.position.y, transform.position.z);
+        spikePosition = new Vector3(transform.position.x + 10, transform.position.y, transform.position.z);
         newSpike = Instantiate(spikesPrefab, spikePosition, transform.rotation);
-        spikeMove = new Vector3(-3, 0, 0);
+        spikeMove = new Vector3(-5, 0, 0);
     }
 
     void Update()
@@ -84,7 +84,7 @@ public class SegmentGenerator : MonoBehaviour
         foreach(GameObject seg in poolOfSegments){
             Segment segtScript = seg.GetComponent<Segment>();
             if(segtScript.uniqueID == segmentID){
-                break;
+                usableSegments.Add(seg);
             }
         }
     }

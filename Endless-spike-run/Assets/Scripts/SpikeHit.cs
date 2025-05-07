@@ -9,7 +9,7 @@ public class SpikeHit : MonoBehaviour
     {
         if(other.CompareTag("Player")){
             Cursor.lockState = CursorLockMode.None;
-            SceneManager.LoadScene("MainMenu");
+            SceneManager.LoadScene("DeathScene");
         }
     }
 }
