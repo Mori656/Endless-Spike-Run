@@ -352,5 +352,9 @@ PrefabInstance:
       propertyPath: m_Name
       value: Segment Generator
       objectReference: {fileID: 0}
+    - target: {fileID: 2396226099982999859, guid: 5fc106d3e558e8f49a4225224252d4fa, type: 3}
+      propertyPath: m_TagString
+      value: SegmentGenerator
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5fc106d3e558e8f49a4225224252d4fa, type: 3}

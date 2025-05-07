@@ -7,15 +7,21 @@ public class SegmentRecycler : MonoBehaviour
     private SegmentGenerator SegGen;
     void Start()
     {
-        SegGen = FindObjectOfType<SegmentGenerator>();
+        GameObject tmp = GameObject.FindWithTag("SegmentGenerator");
+        if (tmp == null) 
+        {
+            Debug.LogError("Nie znaleziono generatora");
+        } else {
+            SegGen = tmp.GetComponent<SegmentGenerator>();
+        }
         if (SegGen == null)
         {
-            Debug.LogError("Nie znaleziono obiektu SegmentGenerator na scenie!");
+            Debug.LogError("Nie udało się załadować generatora!");
         }
     }
     void OnTriggerEnter(Collider other)
     {
-        if (other.tag == "Room"){
+        if (other.tag == "Rooms"){
             Segment segmentScript = other.GetComponent<Segment>();
             SegGen.addToUsable(segmentScript.uniqueID);
         }

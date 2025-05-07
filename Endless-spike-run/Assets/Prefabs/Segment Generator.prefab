@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2396226099982999823}
   m_Layer: 0
   m_Name: Segment Generator
-  m_TagString: Untagged
+  m_TagString: SegmentGenerator
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -61,3 +61,4 @@ MonoBehaviour:
   segmentPrefab:
   - {fileID: 7429775279315167546, guid: b5a788f6d48edc94da50c05c91e1f7f0, type: 3}
   spikesPrefab: {fileID: 6167209938208029268, guid: 162aa94e58ef3d94ea2a0d116099b991, type: 3}
+  uniqueID: 
