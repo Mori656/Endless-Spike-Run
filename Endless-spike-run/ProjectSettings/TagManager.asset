@@ -6,6 +6,9 @@ TagManager:
   tags:
   - SegmentGenerator
   - Rooms
+  - Collectable
+  - Coin
+  - Star
   layers:
   - Default
   - TransparentFX
@@ -13,7 +16,7 @@ TagManager:
   - 
   - Water
   - UI
-  - 
+  - Collectable
   - 
   - 
   - 

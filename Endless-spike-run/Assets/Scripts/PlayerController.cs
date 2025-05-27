@@ -1,4 +1,5 @@
 using UnityEngine;
+using TMPro;
 
 [RequireComponent(typeof(CharacterController))]
 [RequireComponent(typeof(AudioSource))]
@@ -12,6 +13,7 @@ public class PlayerController : MonoBehaviour
     public float gravity = -9.81f;
     public float slideSpeed = 10f;
     public float slideDuration = 0.7f;
+
 
     [Header("Audio Settings")]
     public AudioClip footstepsClip;
@@ -29,6 +31,15 @@ public class PlayerController : MonoBehaviour
 
     private float currentSpeed = 0f;
     private float stepTimer = 0f;
+
+    // score and star
+
+    private float starBuff = 10f; 
+    public int score = 0;
+    
+    public TextMeshProUGUI textUI;
+
+
 
     void Start()
     {
@@ -51,6 +62,10 @@ public class PlayerController : MonoBehaviour
         {
             StartSlide();
         }
+        if (textUI != null)
+            textUI.text = "Wynik: " + score.ToString();
+        else
+            Debug.LogWarning("textUI nie jest przypisane w inspektorze!");
     }
 
     void Move()
@@ -123,6 +138,23 @@ public class PlayerController : MonoBehaviour
         if (clip != null)
         {
             audioSource.PlayOneShot(clip);
+        }
+    }
+// score and star
+    private void OnTriggerEnter(Collider other)
+    {
+
+        if (other.CompareTag("Coin"))
+        {
+            score++;
+            Destroy(other.gameObject);
+        }
+        
+        if (other.CompareTag("Star"))
+        {
+            score += 10;
+            starBuff = 10;
+            Destroy(other.gameObject);
         }
     }
 }
