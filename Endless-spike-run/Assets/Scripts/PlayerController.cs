@@ -123,7 +123,14 @@ public class PlayerController : MonoBehaviour
     {
         isSliding = true;
         controller.height = slideHeight;
-        PlaySound(slideClip);
+
+        if (slideClip != null)
+        {
+            audioSource.clip = slideClip;
+            audioSource.loop = false;
+            audioSource.Play();
+        }
+
         Invoke(nameof(EndSlide), slideDuration);
     }
 
@@ -131,6 +138,13 @@ public class PlayerController : MonoBehaviour
     {
         isSliding = false;
         controller.height = originalHeight;
+
+        // Zatrzymaj dŸwiêk, jeœli nadal gra
+        if (audioSource.clip == slideClip && audioSource.isPlaying)
+        {
+            audioSource.Stop();
+            audioSource.clip = null;
+        }
     }
 
     void PlaySound(AudioClip clip)

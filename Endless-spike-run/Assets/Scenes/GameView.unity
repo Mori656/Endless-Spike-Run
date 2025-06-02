@@ -1122,6 +1122,10 @@ PrefabInstance:
       propertyPath: textUI
       value: 
       objectReference: {fileID: 921441717}
+    - target: {fileID: 3987538940724254945, guid: 288d32339b50f8a40839c4f160c9e582, type: 3}
+      propertyPath: slideHeight
+      value: 0.1
+      objectReference: {fileID: 0}
     - target: {fileID: 6982718826880823768, guid: 288d32339b50f8a40839c4f160c9e582, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -1204,12 +1208,12 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2396226099982999823, guid: 5fc106d3e558e8f49a4225224252d4fa, type: 3}
       propertyPath: segmentPrefab.Array.size
-      value: 5
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 2396226099982999823, guid: 5fc106d3e558e8f49a4225224252d4fa, type: 3}
       propertyPath: segmentPrefab.Array.data[0]
       value: 
-      objectReference: {fileID: 7429775279315167546, guid: b5a788f6d48edc94da50c05c91e1f7f0, type: 3}
+      objectReference: {fileID: 8352887607894926781, guid: d05a354ada5687d44ab3704ee45c6df2, type: 3}
     - target: {fileID: 2396226099982999823, guid: 5fc106d3e558e8f49a4225224252d4fa, type: 3}
       propertyPath: segmentPrefab.Array.data[1]
       value: 
@@ -1226,6 +1230,30 @@ PrefabInstance:
       propertyPath: segmentPrefab.Array.data[4]
       value: 
       objectReference: {fileID: 680289669691325636, guid: ee110c672c705ca4d82d6073b3b9e54d, type: 3}
+    - target: {fileID: 2396226099982999823, guid: 5fc106d3e558e8f49a4225224252d4fa, type: 3}
+      propertyPath: segmentPrefab.Array.data[5]
+      value: 
+      objectReference: {fileID: 680289669691325636, guid: f5cc5e0eb10b5714baa1125f28deedf8, type: 3}
+    - target: {fileID: 2396226099982999823, guid: 5fc106d3e558e8f49a4225224252d4fa, type: 3}
+      propertyPath: segmentPrefab.Array.data[6]
+      value: 
+      objectReference: {fileID: 680289669691325636, guid: ff7019791d3d98540878ec74656922c2, type: 3}
+    - target: {fileID: 2396226099982999823, guid: 5fc106d3e558e8f49a4225224252d4fa, type: 3}
+      propertyPath: segmentPrefab.Array.data[7]
+      value: 
+      objectReference: {fileID: 680289669691325636, guid: 574fa1bf79343364e90421d161d3d356, type: 3}
+    - target: {fileID: 2396226099982999823, guid: 5fc106d3e558e8f49a4225224252d4fa, type: 3}
+      propertyPath: segmentPrefab.Array.data[8]
+      value: 
+      objectReference: {fileID: 680289669691325636, guid: e7c893ee7b813a041a01b63df86a1225, type: 3}
+    - target: {fileID: 2396226099982999823, guid: 5fc106d3e558e8f49a4225224252d4fa, type: 3}
+      propertyPath: segmentPrefab.Array.data[9]
+      value: 
+      objectReference: {fileID: 680289669691325636, guid: fdf20ac6839e991438b21eba089d6288, type: 3}
+    - target: {fileID: 2396226099982999823, guid: 5fc106d3e558e8f49a4225224252d4fa, type: 3}
+      propertyPath: segmentPrefab.Array.data[10]
+      value: 
+      objectReference: {fileID: 680289669691325636, guid: 23e474343343e9d418a64c0e2df44c34, type: 3}
     - target: {fileID: 2396226099982999856, guid: 5fc106d3e558e8f49a4225224252d4fa, type: 3}
       propertyPath: m_RootOrder
       value: 1
