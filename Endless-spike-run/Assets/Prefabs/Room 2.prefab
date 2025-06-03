@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 2713980539765789660}
   m_Layer: 0
   m_Name: tyre3
-  m_TagString: Untagged
+  m_TagString: Envoirment
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -45,7 +45,7 @@ GameObject:
   - component: {fileID: 1300996273425160476}
   m_Layer: 0
   m_Name: pCylinder27 1
-  m_TagString: Untagged
+  m_TagString: Envoirment
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -128,7 +128,7 @@ GameObject:
   - component: {fileID: 5500164302970898822}
   m_Layer: 0
   m_Name: pCylinder22
-  m_TagString: Untagged
+  m_TagString: Envoirment
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -211,7 +211,7 @@ GameObject:
   - component: {fileID: 7983894928263603746}
   m_Layer: 0
   m_Name: pCube89
-  m_TagString: Untagged
+  m_TagString: Envoirment
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -281,6 +281,40 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!1 &902072065832636840
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3809491141101065643}
+  m_Layer: 0
+  m_Name: Collectable
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3809491141101065643
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 902072065832636840}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -4.941375, y: -2.8940182, z: 0.24204493}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 2509179345903644870}
+  - {fileID: 5006844401270815313}
+  - {fileID: 5154207659544231215}
+  m_Father: {fileID: 8750844276665648215}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &996766792217831824
 GameObject:
   m_ObjectHideFlags: 0
@@ -294,7 +328,7 @@ GameObject:
   - component: {fileID: 4922493766426112692}
   m_Layer: 0
   m_Name: chair
-  m_TagString: Untagged
+  m_TagString: Envoirment
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -360,7 +394,7 @@ GameObject:
   - component: {fileID: 874310361328850569}
   m_Layer: 0
   m_Name: pCylinder27
-  m_TagString: Untagged
+  m_TagString: Envoirment
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -443,7 +477,7 @@ GameObject:
   - component: {fileID: 3819324928248740282}
   m_Layer: 0
   m_Name: pCylinder15
-  m_TagString: Untagged
+  m_TagString: Envoirment
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -526,7 +560,7 @@ GameObject:
   - component: {fileID: 8342038253240383633}
   m_Layer: 0
   m_Name: polySurface1 1
-  m_TagString: Untagged
+  m_TagString: Envoirment
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -609,7 +643,7 @@ GameObject:
   - component: {fileID: 6665897400054057145}
   m_Layer: 0
   m_Name: pCube32
-  m_TagString: Untagged
+  m_TagString: Envoirment
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -692,7 +726,7 @@ GameObject:
   - component: {fileID: 2191814586993249882}
   m_Layer: 0
   m_Name: Point light
-  m_TagString: Untagged
+  m_TagString: Envoirment
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -785,9 +819,10 @@ GameObject:
   - component: {fileID: 2191814587003906718}
   - component: {fileID: 2191814587003090012}
   - component: {fileID: 2191814587002032978}
+  - component: {fileID: 3122661158305157209}
   m_Layer: 0
   m_Name: Lamp
-  m_TagString: Untagged
+  m_TagString: Envoirment
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 65
@@ -859,6 +894,19 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &3122661158305157209
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2191814587004162316}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.9401057, y: 2.1117086, z: 0.8606163}
+  m_Center: {x: 0, y: -0.000000059604645, z: 0}
 --- !u!1 &2191814587004189610
 GameObject:
   m_ObjectHideFlags: 0
@@ -871,7 +919,7 @@ GameObject:
   - component: {fileID: 2191814586993216522}
   m_Layer: 0
   m_Name: Point light (3)
-  m_TagString: Untagged
+  m_TagString: Envoirment
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -966,7 +1014,7 @@ GameObject:
   - component: {fileID: 8736669709338684967}
   m_Layer: 0
   m_Name: pCylinder20
-  m_TagString: Untagged
+  m_TagString: Envoirment
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1048,7 +1096,7 @@ GameObject:
   - component: {fileID: 1019122556257832165}
   m_Layer: 0
   m_Name: analytical_lab_instruments
-  m_TagString: Untagged
+  m_TagString: Envoirment
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1099,9 +1147,10 @@ GameObject:
   - component: {fileID: 2297392085319574253}
   - component: {fileID: 4036648738969916967}
   - component: {fileID: 2540046304437510174}
+  - component: {fileID: 2947653148348161466}
   m_Layer: 0
   m_Name: china dish
-  m_TagString: Untagged
+  m_TagString: Envoirment
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1185,6 +1234,19 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 6340686919383265571, guid: f0ab5f518a39b5e40a973ef5bbb25921, type: 3}
+--- !u!65 &2947653148348161466
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2523690159363012594}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.093377225, y: 0.030830458, z: 0.08604254}
+  m_Center: {x: 0, y: 0.012490043, z: 0.000000009313226}
 --- !u!1 &2523935309473849421
 GameObject:
   m_ObjectHideFlags: 0
@@ -1198,7 +1260,7 @@ GameObject:
   - component: {fileID: 7290935635283435607}
   m_Layer: 0
   m_Name: polySurface3
-  m_TagString: Untagged
+  m_TagString: Envoirment
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1281,7 +1343,7 @@ GameObject:
   - component: {fileID: 5111974660177491861}
   m_Layer: 0
   m_Name: pCylinder26 1
-  m_TagString: Untagged
+  m_TagString: Envoirment
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1362,7 +1424,7 @@ GameObject:
   - component: {fileID: 6927054322921966851}
   m_Layer: 0
   m_Name: tyre2
-  m_TagString: Untagged
+  m_TagString: Envoirment
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1397,7 +1459,7 @@ GameObject:
   - component: {fileID: 6121363996630723004}
   m_Layer: 0
   m_Name: pCube187
-  m_TagString: Untagged
+  m_TagString: Envoirment
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1480,7 +1542,7 @@ GameObject:
   - component: {fileID: 3910996088711075526}
   m_Layer: 0
   m_Name: pCube186
-  m_TagString: Untagged
+  m_TagString: Envoirment
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1563,7 +1625,7 @@ GameObject:
   - component: {fileID: 7124553309919541477}
   m_Layer: 0
   m_Name: pCube31
-  m_TagString: Untagged
+  m_TagString: Envoirment
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1646,7 +1708,7 @@ GameObject:
   - component: {fileID: 8191707359562595654}
   m_Layer: 0
   m_Name: polySurface1 2
-  m_TagString: Untagged
+  m_TagString: Envoirment
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1729,7 +1791,7 @@ GameObject:
   - component: {fileID: 4822110425301153513}
   m_Layer: 0
   m_Name: polySurface1 1
-  m_TagString: Untagged
+  m_TagString: Envoirment
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1812,7 +1874,7 @@ GameObject:
   - component: {fileID: 7775767258419686043}
   m_Layer: 0
   m_Name: pCube186
-  m_TagString: Untagged
+  m_TagString: Envoirment
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1895,7 +1957,7 @@ GameObject:
   - component: {fileID: 4059104734901612587}
   m_Layer: 0
   m_Name: pCube12
-  m_TagString: Untagged
+  m_TagString: Envoirment
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1979,7 +2041,7 @@ GameObject:
   - component: {fileID: 1217468601695571741}
   m_Layer: 0
   m_Name: Erlenmeyer_flask3
-  m_TagString: Untagged
+  m_TagString: Envoirment
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2073,9 +2135,10 @@ GameObject:
   m_Component:
   - component: {fileID: 4222016799951743732}
   - component: {fileID: 670186233286849425}
+  - component: {fileID: 7348080408592405943}
   m_Layer: 0
   m_Name: Spirit_Lamp with water
-  m_TagString: Untagged
+  m_TagString: Envoirment
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2113,6 +2176,19 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 0}
+--- !u!65 &7348080408592405943
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3592831564006469710}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &3795616086991055043
 GameObject:
   m_ObjectHideFlags: 0
@@ -2126,7 +2202,7 @@ GameObject:
   - component: {fileID: 5567135532300291671}
   m_Layer: 0
   m_Name: pCylinder26
-  m_TagString: Untagged
+  m_TagString: Envoirment
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2209,7 +2285,7 @@ GameObject:
   - component: {fileID: 8016369022954103406}
   m_Layer: 0
   m_Name: pCylinder27 2
-  m_TagString: Untagged
+  m_TagString: Envoirment
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2292,7 +2368,7 @@ GameObject:
   - component: {fileID: 8424956159000241381}
   m_Layer: 0
   m_Name: pCylinder7
-  m_TagString: Untagged
+  m_TagString: Envoirment
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2375,7 +2451,7 @@ GameObject:
   - component: {fileID: 5506417246336221915}
   m_Layer: 0
   m_Name: table with drawers
-  m_TagString: Untagged
+  m_TagString: Envoirment
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2440,7 +2516,7 @@ GameObject:
   - component: {fileID: 5902294085847641448}
   m_Layer: 0
   m_Name: pSphere3
-  m_TagString: Untagged
+  m_TagString: Envoirment
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2523,7 +2599,7 @@ GameObject:
   - component: {fileID: 5909405809699347328}
   m_Layer: 0
   m_Name: water Shelf
-  m_TagString: Untagged
+  m_TagString: Envoirment
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2585,7 +2661,7 @@ GameObject:
   - component: {fileID: 5335294142305255826}
   m_Layer: 0
   m_Name: pCylinder5
-  m_TagString: Untagged
+  m_TagString: Envoirment
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2668,7 +2744,7 @@ GameObject:
   - component: {fileID: 3746477805241678281}
   m_Layer: 0
   m_Name: polySurface2 2
-  m_TagString: Untagged
+  m_TagString: Envoirment
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2751,7 +2827,7 @@ GameObject:
   - component: {fileID: 2714231313337485483}
   m_Layer: 0
   m_Name: polySurface2
-  m_TagString: Untagged
+  m_TagString: Envoirment
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2834,7 +2910,7 @@ GameObject:
   - component: {fileID: 107798321628281168}
   m_Layer: 0
   m_Name: pCube23
-  m_TagString: Untagged
+  m_TagString: Envoirment
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2915,7 +2991,7 @@ GameObject:
   - component: {fileID: 4556810539922279475}
   m_Layer: 0
   m_Name: tyre
-  m_TagString: Untagged
+  m_TagString: Envoirment
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2951,7 +3027,7 @@ GameObject:
   - component: {fileID: 4191043816340235897}
   m_Layer: 0
   m_Name: pSphere8
-  m_TagString: Untagged
+  m_TagString: Envoirment
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3032,7 +3108,7 @@ GameObject:
   - component: {fileID: 7704356657364356100}
   m_Layer: 0
   m_Name: Boiling_liquid_in_flask
-  m_TagString: Untagged
+  m_TagString: Envoirment
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3068,7 +3144,7 @@ GameObject:
   - component: {fileID: 274115642042604594}
   m_Layer: 0
   m_Name: pTorus1 1
-  m_TagString: Untagged
+  m_TagString: Envoirment
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3151,7 +3227,7 @@ GameObject:
   - component: {fileID: 5011664828314050262}
   m_Layer: 0
   m_Name: polySurface2 1
-  m_TagString: Untagged
+  m_TagString: Envoirment
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3231,9 +3307,10 @@ GameObject:
   m_Component:
   - component: {fileID: 5560845690374854674}
   - component: {fileID: 7228181651610408127}
+  - component: {fileID: 5041762476965342447}
   m_Layer: 0
   m_Name: Boiling_Liquid_Stand
-  m_TagString: Untagged
+  m_TagString: Envoirment
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3272,6 +3349,19 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 0}
+--- !u!65 &5041762476965342447
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5073242435899769512}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &5263013075184209556
 GameObject:
   m_ObjectHideFlags: 0
@@ -3282,9 +3372,10 @@ GameObject:
   m_Component:
   - component: {fileID: 4774424928804344878}
   - component: {fileID: 6553622834972040878}
+  - component: {fileID: 8106354466163392598}
   m_Layer: 0
   m_Name: tap
-  m_TagString: Untagged
+  m_TagString: Envoirment
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3321,6 +3412,19 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 0}
+--- !u!65 &8106354466163392598
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5263013075184209556}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &5315011041298717827
 GameObject:
   m_ObjectHideFlags: 0
@@ -3334,7 +3438,7 @@ GameObject:
   - component: {fileID: 7845185477383856655}
   m_Layer: 0
   m_Name: pCylinder26 2
-  m_TagString: Untagged
+  m_TagString: Envoirment
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3417,7 +3521,7 @@ GameObject:
   - component: {fileID: 4806030546843833317}
   m_Layer: 0
   m_Name: polySurface3
-  m_TagString: Untagged
+  m_TagString: Envoirment
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3500,7 +3604,7 @@ GameObject:
   - component: {fileID: 1164637218772260996}
   m_Layer: 0
   m_Name: polySurface1 3
-  m_TagString: Untagged
+  m_TagString: Envoirment
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3583,7 +3687,7 @@ GameObject:
   - component: {fileID: 5361584797430209041}
   m_Layer: 0
   m_Name: pCylinder1
-  m_TagString: Untagged
+  m_TagString: Envoirment
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3666,7 +3770,7 @@ GameObject:
   - component: {fileID: 901317840092272328}
   m_Layer: 0
   m_Name: pCylinder14
-  m_TagString: Untagged
+  m_TagString: Envoirment
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3749,7 +3853,7 @@ GameObject:
   - component: {fileID: 2441923611628278954}
   m_Layer: 0
   m_Name: pCylinder21
-  m_TagString: Untagged
+  m_TagString: Envoirment
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3832,7 +3936,7 @@ GameObject:
   - component: {fileID: 5328426388585220043}
   m_Layer: 0
   m_Name: pCylinder6
-  m_TagString: Untagged
+  m_TagString: Envoirment
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3915,7 +4019,7 @@ GameObject:
   - component: {fileID: 9053662877923715720}
   m_Layer: 0
   m_Name: pCube200
-  m_TagString: Untagged
+  m_TagString: Envoirment
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3998,7 +4102,7 @@ GameObject:
   - component: {fileID: 5845803806827116432}
   m_Layer: 0
   m_Name: polySurface1
-  m_TagString: Untagged
+  m_TagString: Envoirment
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4079,7 +4183,7 @@ GameObject:
   - component: {fileID: 479330708537122176}
   m_Layer: 0
   m_Name: tyre3
-  m_TagString: Untagged
+  m_TagString: Envoirment
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4111,7 +4215,7 @@ GameObject:
   - component: {fileID: 6675133463936136397}
   m_Layer: 0
   m_Name: Boiling_liquid_in_flask2
-  m_TagString: Untagged
+  m_TagString: Envoirment
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4147,7 +4251,7 @@ GameObject:
   - component: {fileID: 6140851633116444317}
   m_Layer: 0
   m_Name: polySurface2 2
-  m_TagString: Untagged
+  m_TagString: Envoirment
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4228,7 +4332,7 @@ GameObject:
   - component: {fileID: 853704599854389423}
   m_Layer: 0
   m_Name: Boiling_liquid_in_flask1
-  m_TagString: Untagged
+  m_TagString: Envoirment
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4264,7 +4368,7 @@ GameObject:
   - component: {fileID: 685862142535576936}
   m_Layer: 0
   m_Name: cut_shelf
-  m_TagString: Untagged
+  m_TagString: Envoirment
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4347,7 +4451,7 @@ GameObject:
   - component: {fileID: 6750716741285761817}
   m_Layer: 0
   m_Name: pCube187
-  m_TagString: Untagged
+  m_TagString: Envoirment
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4428,7 +4532,7 @@ GameObject:
   - component: {fileID: 1785577636458578417}
   m_Layer: 0
   m_Name: tyre1
-  m_TagString: Untagged
+  m_TagString: Envoirment
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4463,7 +4567,7 @@ GameObject:
   - component: {fileID: 5902485962783678209}
   m_Layer: 0
   m_Name: polySurface2
-  m_TagString: Untagged
+  m_TagString: Envoirment
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4545,9 +4649,10 @@ GameObject:
   - component: {fileID: 6401224154888772747}
   - component: {fileID: 9165177350866561089}
   - component: {fileID: 7035951228582738514}
+  - component: {fileID: 1083971885151035146}
   m_Layer: 0
   m_Name: florence_flask
-  m_TagString: Untagged
+  m_TagString: Envoirment
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4631,6 +4736,19 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -6725155381145740070, guid: fb0b01455e191c24b87848c181088517, type: 3}
+--- !u!65 &1083971885151035146
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7219758720768854420}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.14201759, y: 0.26135373, z: 0.14201766}
+  m_Center: {x: 0, y: 0.12720299, z: 0}
 --- !u!1 &7223726836466959975
 GameObject:
   m_ObjectHideFlags: 0
@@ -4644,7 +4762,7 @@ GameObject:
   - component: {fileID: 6566978585549507220}
   m_Layer: 0
   m_Name: polySurface2 1
-  m_TagString: Untagged
+  m_TagString: Envoirment
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4727,7 +4845,7 @@ GameObject:
   - component: {fileID: 1244354243587046213}
   m_Layer: 0
   m_Name: pTorus1
-  m_TagString: Untagged
+  m_TagString: Envoirment
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4810,7 +4928,7 @@ GameObject:
   - component: {fileID: 2668462536450144317}
   m_Layer: 0
   m_Name: pCube12
-  m_TagString: Untagged
+  m_TagString: Envoirment
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4893,7 +5011,7 @@ GameObject:
   - component: {fileID: 3380713522094566307}
   m_Layer: 0
   m_Name: polySurface1 3
-  m_TagString: Untagged
+  m_TagString: Envoirment
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4974,7 +5092,7 @@ GameObject:
   - component: {fileID: 2448563261276832338}
   m_Layer: 0
   m_Name: tyre1
-  m_TagString: Untagged
+  m_TagString: Envoirment
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5009,7 +5127,7 @@ GameObject:
   - component: {fileID: 9020461656083616473}
   m_Layer: 0
   m_Name: pCube22
-  m_TagString: Untagged
+  m_TagString: Envoirment
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5091,9 +5209,10 @@ GameObject:
   - component: {fileID: 6284857313249528586}
   - component: {fileID: 8132580792268357568}
   - component: {fileID: 3832780581910792822}
+  - component: {fileID: 3839106469343751642}
   m_Layer: 0
   m_Name: Erlenmeyer_flask with water
-  m_TagString: Untagged
+  m_TagString: Envoirment
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5178,6 +5297,19 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 5500921399522267773, guid: 2d6b31bbb0cc4d74f9eb0dcbe73380be, type: 3}
+--- !u!65 &3839106469343751642
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7772165484530523669}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.13621019, y: 0.18680221, z: 0.1362108}
+  m_Center: {x: -0.00000023841858, y: 0.09287201, z: 0}
 --- !u!1 &8069002230784307092
 GameObject:
   m_ObjectHideFlags: 0
@@ -5191,7 +5323,7 @@ GameObject:
   - component: {fileID: 76110881964218600}
   m_Layer: 0
   m_Name: pCylinder2
-  m_TagString: Untagged
+  m_TagString: Envoirment
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5270,9 +5402,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7941882493580069557}
+  - component: {fileID: 8016110205384103509}
   m_Layer: 0
   m_Name: Furniture
-  m_TagString: Untagged
+  m_TagString: Envoirment
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5306,6 +5439,22 @@ Transform:
   m_Father: {fileID: 8750844276665648215}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!54 &8016110205384103509
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8091841403063620043}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &8107624774930856037
 GameObject:
   m_ObjectHideFlags: 0
@@ -5319,7 +5468,7 @@ GameObject:
   - component: {fileID: 6283842014588432435}
   m_Layer: 0
   m_Name: pCylinder2
-  m_TagString: Untagged
+  m_TagString: Envoirment
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5402,7 +5551,7 @@ GameObject:
   - component: {fileID: 1487286088207035945}
   m_Layer: 0
   m_Name: table with drawers
-  m_TagString: Untagged
+  m_TagString: Envoirment
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5467,7 +5616,7 @@ GameObject:
   - component: {fileID: 3745044155621276479}
   m_Layer: 0
   m_Name: polySurface1
-  m_TagString: Untagged
+  m_TagString: Envoirment
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5550,7 +5699,7 @@ GameObject:
   - component: {fileID: 268960228526409004}
   m_Layer: 0
   m_Name: pCylinder1
-  m_TagString: Untagged
+  m_TagString: Envoirment
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5631,7 +5780,7 @@ GameObject:
   - component: {fileID: 4290332188085355935}
   m_Layer: 0
   m_Name: tyre
-  m_TagString: Untagged
+  m_TagString: Envoirment
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5667,7 +5816,7 @@ GameObject:
   - component: {fileID: 8926178788602216991}
   m_Layer: 0
   m_Name: pTorus1 2
-  m_TagString: Untagged
+  m_TagString: Envoirment
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5750,7 +5899,7 @@ GameObject:
   - component: {fileID: 378271532515214348}
   m_Layer: 0
   m_Name: pCube23
-  m_TagString: Untagged
+  m_TagString: Envoirment
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5831,7 +5980,7 @@ GameObject:
   - component: {fileID: 7469771585827898802}
   m_Layer: 0
   m_Name: tyre2
-  m_TagString: Untagged
+  m_TagString: Envoirment
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5866,7 +6015,7 @@ GameObject:
   - component: {fileID: 1358061956306879884}
   m_Layer: 0
   m_Name: chair
-  m_TagString: Untagged
+  m_TagString: Envoirment
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6340,6 +6489,7 @@ Transform:
   - {fileID: 8750844275618279709}
   - {fileID: 8750844276670427140}
   - {fileID: 7941882493580069557}
+  - {fileID: 3809491141101065643}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -6402,7 +6552,7 @@ GameObject:
   - component: {fileID: 475797086390160226}
   m_Layer: 0
   m_Name: pCylinder25
-  m_TagString: Untagged
+  m_TagString: Envoirment
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6486,7 +6636,7 @@ GameObject:
   - component: {fileID: 4563735255179463040}
   m_Layer: 0
   m_Name: rack
-  m_TagString: Untagged
+  m_TagString: Envoirment
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6582,7 +6732,7 @@ GameObject:
   - component: {fileID: 1253169032525384898}
   m_Layer: 0
   m_Name: polySurface1 2
-  m_TagString: Untagged
+  m_TagString: Envoirment
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6665,7 +6815,7 @@ GameObject:
   - component: {fileID: 772721543521293338}
   m_Layer: 0
   m_Name: pCube22
-  m_TagString: Untagged
+  m_TagString: Envoirment
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6748,7 +6898,7 @@ GameObject:
   - component: {fileID: 1443202056900320859}
   m_Layer: 0
   m_Name: pCylinder8
-  m_TagString: Untagged
+  m_TagString: Envoirment
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6818,3 +6968,193 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!1001 &430960514154706215
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 3809491141101065643}
+    m_Modifications:
+    - target: {fileID: 2821911022707399105, guid: 366765ef37d245047956c928b6ab3a7f, type: 3}
+      propertyPath: m_Name
+      value: Coin
+      objectReference: {fileID: 0}
+    - target: {fileID: 2821911022707426785, guid: 366765ef37d245047956c928b6ab3a7f, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2821911022707426785, guid: 366765ef37d245047956c928b6ab3a7f, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 2821911022707426785, guid: 366765ef37d245047956c928b6ab3a7f, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 3.45
+      objectReference: {fileID: 0}
+    - target: {fileID: 2821911022707426785, guid: 366765ef37d245047956c928b6ab3a7f, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 4.38
+      objectReference: {fileID: 0}
+    - target: {fileID: 2821911022707426785, guid: 366765ef37d245047956c928b6ab3a7f, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2821911022707426785, guid: 366765ef37d245047956c928b6ab3a7f, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2821911022707426785, guid: 366765ef37d245047956c928b6ab3a7f, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2821911022707426785, guid: 366765ef37d245047956c928b6ab3a7f, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2821911022707426785, guid: 366765ef37d245047956c928b6ab3a7f, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2821911022707426785, guid: 366765ef37d245047956c928b6ab3a7f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2821911022707426785, guid: 366765ef37d245047956c928b6ab3a7f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2821911022707426785, guid: 366765ef37d245047956c928b6ab3a7f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 366765ef37d245047956c928b6ab3a7f, type: 3}
+--- !u!4 &2509179345903644870 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2821911022707426785, guid: 366765ef37d245047956c928b6ab3a7f, type: 3}
+  m_PrefabInstance: {fileID: 430960514154706215}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &6966538182825834702
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 3809491141101065643}
+    m_Modifications:
+    - target: {fileID: 2821911022707399105, guid: 366765ef37d245047956c928b6ab3a7f, type: 3}
+      propertyPath: m_Name
+      value: Coin
+      objectReference: {fileID: 0}
+    - target: {fileID: 2821911022707426785, guid: 366765ef37d245047956c928b6ab3a7f, type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2821911022707426785, guid: 366765ef37d245047956c928b6ab3a7f, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 2.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 2821911022707426785, guid: 366765ef37d245047956c928b6ab3a7f, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 4.422
+      objectReference: {fileID: 0}
+    - target: {fileID: 2821911022707426785, guid: 366765ef37d245047956c928b6ab3a7f, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -1.89
+      objectReference: {fileID: 0}
+    - target: {fileID: 2821911022707426785, guid: 366765ef37d245047956c928b6ab3a7f, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2821911022707426785, guid: 366765ef37d245047956c928b6ab3a7f, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2821911022707426785, guid: 366765ef37d245047956c928b6ab3a7f, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2821911022707426785, guid: 366765ef37d245047956c928b6ab3a7f, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2821911022707426785, guid: 366765ef37d245047956c928b6ab3a7f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2821911022707426785, guid: 366765ef37d245047956c928b6ab3a7f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2821911022707426785, guid: 366765ef37d245047956c928b6ab3a7f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 366765ef37d245047956c928b6ab3a7f, type: 3}
+--- !u!4 &5154207659544231215 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2821911022707426785, guid: 366765ef37d245047956c928b6ab3a7f, type: 3}
+  m_PrefabInstance: {fileID: 6966538182825834702}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &7084887253177745328
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 3809491141101065643}
+    m_Modifications:
+    - target: {fileID: 2821911022707399105, guid: 366765ef37d245047956c928b6ab3a7f, type: 3}
+      propertyPath: m_Name
+      value: Coin (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2821911022707426785, guid: 366765ef37d245047956c928b6ab3a7f, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2821911022707426785, guid: 366765ef37d245047956c928b6ab3a7f, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 5.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 2821911022707426785, guid: 366765ef37d245047956c928b6ab3a7f, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 3.23
+      objectReference: {fileID: 0}
+    - target: {fileID: 2821911022707426785, guid: 366765ef37d245047956c928b6ab3a7f, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -1.978
+      objectReference: {fileID: 0}
+    - target: {fileID: 2821911022707426785, guid: 366765ef37d245047956c928b6ab3a7f, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2821911022707426785, guid: 366765ef37d245047956c928b6ab3a7f, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2821911022707426785, guid: 366765ef37d245047956c928b6ab3a7f, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2821911022707426785, guid: 366765ef37d245047956c928b6ab3a7f, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2821911022707426785, guid: 366765ef37d245047956c928b6ab3a7f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2821911022707426785, guid: 366765ef37d245047956c928b6ab3a7f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2821911022707426785, guid: 366765ef37d245047956c928b6ab3a7f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 366765ef37d245047956c928b6ab3a7f, type: 3}
+--- !u!4 &5006844401270815313 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2821911022707426785, guid: 366765ef37d245047956c928b6ab3a7f, type: 3}
+  m_PrefabInstance: {fileID: 7084887253177745328}
+  m_PrefabAsset: {fileID: 0}

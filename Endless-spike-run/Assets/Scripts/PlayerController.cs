@@ -34,7 +34,7 @@ public class PlayerController : MonoBehaviour
 
     // score and star
 
-    private float starBuff = 10f; 
+    private float starBuff = 0f; 
     public int score = 0;
     
     public TextMeshProUGUI textUI;
@@ -66,6 +66,17 @@ public class PlayerController : MonoBehaviour
             textUI.text = "Wynik: " + score.ToString();
         else
             Debug.LogWarning("textUI nie jest przypisane w inspektorze!");
+
+        if (starBuff >= 1f)
+        {
+            starBuff -= Time.deltaTime;
+        }
+        else
+        {
+            starBuff = 0;
+        }
+
+        
     }
 
     void Move()
@@ -139,7 +150,7 @@ public class PlayerController : MonoBehaviour
         isSliding = false;
         controller.height = originalHeight;
 
-        // Zatrzymaj dŸwiêk, jeœli nadal gra
+        // Zatrzymaj dï¿½wiï¿½k, jeï¿½li nadal gra
         if (audioSource.clip == slideClip && audioSource.isPlaying)
         {
             audioSource.Stop();
@@ -154,21 +165,26 @@ public class PlayerController : MonoBehaviour
             audioSource.PlayOneShot(clip);
         }
     }
-// score and star
+    // score and star
     private void OnTriggerEnter(Collider other)
     {
 
         if (other.CompareTag("Coin"))
         {
             score++;
-            Destroy(other.gameObject);
+            other.gameObject.SetActive(false);
         }
-        
+
         if (other.CompareTag("Star"))
         {
             score += 10;
             starBuff = 10;
-            Destroy(other.gameObject);
+            other.gameObject.SetActive(false);
+        }
+        
+        if (other.CompareTag("Envoirment") && starBuff > 0)
+        {
+            other.gameObject.SetActive(false);
         }
     }
 }

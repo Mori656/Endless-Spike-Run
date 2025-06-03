@@ -9,6 +9,7 @@ TagManager:
   - Collectable
   - Coin
   - Star
+  - Envoirment
   layers:
   - Default
   - TransparentFX

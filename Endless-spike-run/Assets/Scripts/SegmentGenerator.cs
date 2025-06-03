@@ -24,14 +24,25 @@ public class SegmentGenerator : MonoBehaviour
     void Start()
     {
         poolOfSegments = new List<GameObject>();
+        
+        // Starting segments
+        
+
+        newSegmentPosition = new Vector3(transform.position.x + 10 , transform.position.y, transform.position.z);
+        newSegment = Instantiate(segmentPrefab[1], newSegmentPosition, transform.rotation);
+        Segment segmentInfo = newSegment.AddComponent<Segment>();
+        segmentInfo.uniqueID = Guid.NewGuid().ToString();
+        poolOfSegments.Add(newSegment);
+
         for (int i = 0; i < numberOfSegments; i++)
         {
+            
             int rSegment = UnityEngine.Random.Range(0, segmentPrefab.Length);
 
             // Tworzenie segmentu
-            newSegmentPosition = new Vector3(transform.position.x - 10 * i, transform.position.y, transform.position.z);
+            newSegmentPosition = new Vector3(transform.position.x - 10 * (i), transform.position.y, transform.position.z);
             newSegment = Instantiate(segmentPrefab[rSegment], newSegmentPosition, transform.rotation);
-            Segment segmentInfo = newSegment.AddComponent<Segment>();
+            segmentInfo = newSegment.AddComponent<Segment>();
             segmentInfo.uniqueID = Guid.NewGuid().ToString();
             poolOfSegments.Add(newSegment);
 
@@ -45,7 +56,7 @@ public class SegmentGenerator : MonoBehaviour
         }
 
         // Tworzenie kolca
-        spikePosition = new Vector3(transform.position.x+5, transform.position.y, transform.position.z);
+        spikePosition = new Vector3(transform.position.x+15, transform.position.y, transform.position.z);
         newSpike = Instantiate(spikesPrefab, spikePosition, transform.rotation);
         spikeMove = new Vector3(-(spikeSpeed), 0, 0);
 
@@ -60,7 +71,7 @@ public class SegmentGenerator : MonoBehaviour
         }
         if (usableSegments.Count < 5)
         {
-            spikeAcceleration = 3;
+            spikeAcceleration = 4;
         }
         else
         {
@@ -104,11 +115,30 @@ public class SegmentGenerator : MonoBehaviour
             Segment segtScript = seg.GetComponent<Segment>();
             if (segtScript.uniqueID == segmentID)
             {
+                Transform collectables = seg.transform.Find("Collectable");
+                if (collectables != null)
+                {
+                    foreach (Transform child in collectables)
+                    {
+                        child.gameObject.SetActive(true);
+                    }
+                }
+
+                Transform furnitures = seg.transform.Find("Furniture");
+                if (furnitures != null)
+                {
+                    foreach (Transform child in furnitures)
+                    {
+                        child.gameObject.SetActive(true);
+                    }
+                }
+
                 usableSegments.Add(seg);
             }
         }
     }
 
+    //other.enabled = false;
     void startMoveSpike()
     {
         spikeShouldMove = true;
