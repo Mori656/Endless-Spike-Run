@@ -45,8 +45,7 @@ public class PlayerController : MonoBehaviour
     private float rotationX = 0f;
 
     // Score and Buff
-    public int score = 0;
-    private float starBuff = 0f;
+    public int score = 0;    private float starBuff = 0f;
 
     void Start()
     {
@@ -67,6 +66,7 @@ public class PlayerController : MonoBehaviour
         HandleSlide();
         HandleScoreUI();
         HandleStarBuff();
+        HandleHighScore();
     }
 
     private void HandleLook()
@@ -198,6 +198,20 @@ public class PlayerController : MonoBehaviour
         {
             starBuff = 0;
         }
+    }
+
+    private void HandleHighScore()
+    {
+        if (PlayerPrefs.HasKey("hiScore"))
+        {
+            if(score > PlayerPrefs.GetInt("hiScore"))
+            PlayerPrefs.SetInt("hiScore", score);
+        }
+        else
+        {
+            PlayerPrefs.SetInt("hiScore", score);
+        }
+        PlayerPrefs.Save();
     }
 
     private void PlaySound(AudioClip clip)

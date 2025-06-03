@@ -1,8 +1,19 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.SocialPlatforms.Impl;
+using TMPro;
 
 public class MainMenu : MonoBehaviour
 {
+    public TextMeshProUGUI scoreUI;
+    void Start()
+    {
+        if (PlayerPrefs.HasKey("hiScore"))
+        {
+            scoreUI.text = ""+ PlayerPrefs.GetInt("hiScore");
+        }
+        
+    }
     public void PlayGame()
     {
         SceneManager.LoadScene("GameView");
@@ -20,8 +31,8 @@ public class MainMenu : MonoBehaviour
 
     public void QuitGame()
     {
-        // Wyjœcie z gry
-        Debug.Log("Wyjœcie z gry");
+        // Wyjï¿½cie z gry
+        Debug.Log("Wyjï¿½cie z gry");
         Application.Quit();
     }
 }
