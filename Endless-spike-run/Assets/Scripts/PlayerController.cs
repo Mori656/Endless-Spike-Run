@@ -5,15 +5,22 @@ using TMPro;
 [RequireComponent(typeof(AudioSource))]
 public class PlayerController : MonoBehaviour
 {
+    [Header("Camera")]
+    public Camera playerCamera;
+    public float lookSpeed = 2f;
+    public float lookXLimit = 45f;
+
     [Header("Movement Settings")]
     public float walkSpeed = 5f;
     public float runSpeed = 8f;
     public float acceleration = 5f;
     public float jumpForce = 8f;
     public float gravity = -9.81f;
+    public float crouchHeight = 1f;
+    public float defaultHeight = 2f;
+    public float crouchSpeed = 3f;
     public float slideSpeed = 10f;
     public float slideDuration = 0.7f;
-
 
     [Header("Audio Settings")]
     public AudioClip footstepsClip;
@@ -22,64 +29,55 @@ public class PlayerController : MonoBehaviour
     public float walkStepRate = 0.5f;
     public float runStepRate = 0.3f;
 
+    [Header("UI")]
+    public TextMeshProUGUI textUI;
+    public TextMeshProUGUI buffUI;
+
     private CharacterController controller;
     private AudioSource audioSource;
+
     private Vector3 velocity;
     private bool isSliding = false;
     private float originalHeight;
-    public float slideHeight = 1f;
-
     private float currentSpeed = 0f;
     private float stepTimer = 0f;
 
-    // score and star
+    private float rotationX = 0f;
 
-    private float starBuff = 0f; 
+    // Score and Buff
     public int score = 0;
-    
-    public TextMeshProUGUI textUI;
-
-
+    private float starBuff = 0f;
 
     void Start()
     {
         controller = GetComponent<CharacterController>();
         audioSource = GetComponent<AudioSource>();
-
         originalHeight = controller.height;
+
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
     }
 
     void Update()
     {
-        Move();
+        HandleLook();
+        HandleMovement();
         HandleFootsteps();
-
-        if (Input.GetButtonDown("Jump") && controller.isGrounded && !isSliding)
-        {
-            Jump();
-        }
-        if (Input.GetKeyDown(KeyCode.LeftControl) && controller.isGrounded && !isSliding)
-        {
-            StartSlide();
-        }
-        if (textUI != null)
-            textUI.text = "Wynik: " + score.ToString();
-        else
-            Debug.LogWarning("textUI nie jest przypisane w inspektorze!");
-
-        if (starBuff >= 1f)
-        {
-            starBuff -= Time.deltaTime;
-        }
-        else
-        {
-            starBuff = 0;
-        }
-
-        
+        HandleJump();
+        HandleSlide();
+        HandleScoreUI();
+        HandleStarBuff();
     }
 
-    void Move()
+    private void HandleLook()
+    {
+        rotationX += -Input.GetAxis("Mouse Y") * lookSpeed;
+        rotationX = Mathf.Clamp(rotationX, -lookXLimit, lookXLimit);
+        playerCamera.transform.localRotation = Quaternion.Euler(rotationX, 0, 0);
+        transform.rotation *= Quaternion.Euler(0, Input.GetAxis("Mouse X") * lookSpeed, 0);
+    }
+
+    private void HandleMovement()
     {
         float x = Input.GetAxisRaw("Horizontal");
         float z = Input.GetAxisRaw("Vertical");
@@ -88,10 +86,22 @@ public class PlayerController : MonoBehaviour
 
         bool isRunning = Input.GetKey(KeyCode.LeftShift);
         float targetSpeed = isRunning ? runSpeed : walkSpeed;
-        currentSpeed = Mathf.Lerp(currentSpeed, targetSpeed, acceleration * Time.deltaTime);
 
+        // Kucanie
+        if (Input.GetKey(KeyCode.R) && controller.isGrounded && !isSliding)
+        {
+            controller.height = crouchHeight;
+            targetSpeed = crouchSpeed;
+        }
+        else if (!isSliding)
+        {
+            controller.height = defaultHeight;
+        }
+
+        currentSpeed = Mathf.Lerp(currentSpeed, targetSpeed, acceleration * Time.deltaTime);
         controller.Move(move * currentSpeed * Time.deltaTime);
 
+        // Grawitacja
         velocity.y += gravity * Time.deltaTime;
         controller.Move(velocity * Time.deltaTime);
 
@@ -101,7 +111,7 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    void HandleFootsteps()
+    private void HandleFootsteps()
     {
         if (!controller.isGrounded || isSliding)
             return;
@@ -124,33 +134,38 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    void Jump()
+    private void HandleJump()
     {
-        velocity.y = Mathf.Sqrt(jumpForce * -2f * gravity);
-        PlaySound(jumpClip);
-    }
-
-    void StartSlide()
-    {
-        isSliding = true;
-        controller.height = slideHeight;
-
-        if (slideClip != null)
+        if (Input.GetButtonDown("Jump") && controller.isGrounded && !isSliding)
         {
-            audioSource.clip = slideClip;
-            audioSource.loop = false;
-            audioSource.Play();
+            velocity.y = Mathf.Sqrt(jumpForce * -2f * gravity);
+            PlaySound(jumpClip);
         }
-
-        Invoke(nameof(EndSlide), slideDuration);
     }
 
-    void EndSlide()
+    private void HandleSlide()
+    {
+        if (Input.GetKeyDown(KeyCode.LeftControl) && controller.isGrounded && !isSliding)
+        {
+            isSliding = true;
+            controller.height = crouchHeight;
+
+            if (slideClip != null)
+            {
+                audioSource.clip = slideClip;
+                audioSource.loop = false;
+                audioSource.Play();
+            }
+
+            Invoke(nameof(EndSlide), slideDuration);
+        }
+    }
+
+    private void EndSlide()
     {
         isSliding = false;
-        controller.height = originalHeight;
+        controller.height = defaultHeight;
 
-        // Zatrzymaj d�wi�k, je�li nadal gra
         if (audioSource.clip == slideClip && audioSource.isPlaying)
         {
             audioSource.Stop();
@@ -158,17 +173,43 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    void PlaySound(AudioClip clip)
+    private void HandleScoreUI()
+    {
+        if (textUI != null)
+            textUI.text = "Wynik: " + score.ToString();
+        else
+            Debug.LogWarning("textUI nie jest przypisane w inspektorze!");
+
+        if (buffUI != null && starBuff > 0)
+            buffUI.text = "StarBuff: " + (int)starBuff;
+        else {
+            Debug.LogWarning("buffUI nie jest przypisane w inspektorze!");
+            buffUI.text = "";
+        }
+    }
+
+    private void HandleStarBuff()
+    {
+        if (starBuff >= 1f)
+        {
+            starBuff -= Time.deltaTime;
+        }
+        else
+        {
+            starBuff = 0;
+        }
+    }
+
+    private void PlaySound(AudioClip clip)
     {
         if (clip != null)
         {
             audioSource.PlayOneShot(clip);
         }
     }
-    // score and star
+
     private void OnTriggerEnter(Collider other)
     {
-
         if (other.CompareTag("Coin"))
         {
             score++;
@@ -181,7 +222,7 @@ public class PlayerController : MonoBehaviour
             starBuff = 10;
             other.gameObject.SetActive(false);
         }
-        
+
         if (other.CompareTag("Envoirment") && starBuff > 0)
         {
             other.gameObject.SetActive(false);
