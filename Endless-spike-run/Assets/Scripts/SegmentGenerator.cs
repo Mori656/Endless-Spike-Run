@@ -7,8 +7,10 @@ public class SegmentGenerator : MonoBehaviour
 {
     public GameObject[] segmentPrefab;
     public GameObject spikesPrefab;
-    
-    private static int numberOfSegments = 10;
+    public int spikeSpeed = 5;
+    public int spikeWaitTime = 5;
+
+    private static int numberOfSegments = 15;
     private List<GameObject> usableSegments = new List<GameObject>();
     private List<GameObject> poolOfSegments;
 
@@ -16,18 +18,31 @@ public class SegmentGenerator : MonoBehaviour
 
     private GameObject newSegment, newSpike;
     private Vector3 newSegmentPosition, spikeMove, spikePosition;
+    private int spikeAcceleration = 1;
+    private bool runStart = false, spikeShouldMove = false;
 
     void Start()
     {
         poolOfSegments = new List<GameObject>();
+        
+        // Starting segments
+        
+
+        newSegmentPosition = new Vector3(transform.position.x + 10 , transform.position.y, transform.position.z);
+        newSegment = Instantiate(segmentPrefab[1], newSegmentPosition, transform.rotation);
+        Segment segmentInfo = newSegment.AddComponent<Segment>();
+        segmentInfo.uniqueID = Guid.NewGuid().ToString();
+        poolOfSegments.Add(newSegment);
+
         for (int i = 0; i < numberOfSegments; i++)
         {
-            int rSegment = UnityEngine.Random.Range(0, segmentPrefab.Length);
             
+            int rSegment = UnityEngine.Random.Range(0, segmentPrefab.Length);
+
             // Tworzenie segmentu
-            newSegmentPosition = new Vector3(transform.position.x - 10 * i, transform.position.y, transform.position.z);
+            newSegmentPosition = new Vector3(transform.position.x - 10 * (i), transform.position.y, transform.position.z);
             newSegment = Instantiate(segmentPrefab[rSegment], newSegmentPosition, transform.rotation);
-            Segment segmentInfo = newSegment.AddComponent<Segment>();
+            segmentInfo = newSegment.AddComponent<Segment>();
             segmentInfo.uniqueID = Guid.NewGuid().ToString();
             poolOfSegments.Add(newSegment);
 
@@ -41,14 +56,28 @@ public class SegmentGenerator : MonoBehaviour
         }
 
         // Tworzenie kolca
-        spikePosition = new Vector3(transform.position.x + 10, transform.position.y, transform.position.z);
+        spikePosition = new Vector3(transform.position.x+15, transform.position.y, transform.position.z);
         newSpike = Instantiate(spikesPrefab, spikePosition, transform.rotation);
-        spikeMove = new Vector3(-5, 0, 0);
+        spikeMove = new Vector3(-(spikeSpeed), 0, 0);
+
+        Invoke("startMoveSpike", spikeWaitTime);
     }
 
     void Update()
     {
-        MoveSpikeForward();
+        if (spikeShouldMove)
+        {
+            MoveSpikeForward();
+        }
+        if (usableSegments.Count < 5)
+        {
+            spikeAcceleration = 4;
+        }
+        else
+        {
+            spikeAcceleration = 1;
+        }
+
     }
 
     private void OnTriggerEnter(Collider other)
@@ -76,16 +105,42 @@ public class SegmentGenerator : MonoBehaviour
 
     private void MoveSpikeForward()
     {
-        newSpike.transform.position += spikeMove * Time.deltaTime;
+        newSpike.transform.position += spikeMove * Time.deltaTime * spikeAcceleration;
     }
 
     public void addToUsable(string segmentID)
     {
-        foreach(GameObject seg in poolOfSegments){
+        foreach (GameObject seg in poolOfSegments)
+        {
             Segment segtScript = seg.GetComponent<Segment>();
-            if(segtScript.uniqueID == segmentID){
+            if (segtScript.uniqueID == segmentID)
+            {
+                Transform collectables = seg.transform.Find("Collectable");
+                if (collectables != null)
+                {
+                    foreach (Transform child in collectables)
+                    {
+                        child.gameObject.SetActive(true);
+                    }
+                }
+
+                Transform furnitures = seg.transform.Find("Furniture");
+                if (furnitures != null)
+                {
+                    foreach (Transform child in furnitures)
+                    {
+                        child.gameObject.SetActive(true);
+                    }
+                }
+
                 usableSegments.Add(seg);
             }
         }
+    }
+
+    //other.enabled = false;
+    void startMoveSpike()
+    {
+        spikeShouldMove = true;
     }
 }

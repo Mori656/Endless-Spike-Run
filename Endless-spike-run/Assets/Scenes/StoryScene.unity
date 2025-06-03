@@ -757,9 +757,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: '
-
-'
+  m_Text: 
 --- !u!222 &1139539052
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -839,14 +837,12 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Miasto ogarn\u0119\u0142a panika, gdy z podziemi wydosta\u0142a si\u0119
-    mechaniczna \u015Bciana kolc\xF3w \u2013 niepowstrzymana, \nbezlitosna, zmierzaj\u0105ca
-    ku zniszczeniu wszystkiego na swojej drodze.\nJeste\u015B jednym z nielicznych,
-    kt\xF3rzy zd\u0105\u017Cyli ruszy\u0107 przed ni\u0105. Nie masz broni. Masz
-    tylko nogi, refleks i wol\u0119 przetrwania.\n\nBiegnij przez opustosza\u0142e
-    ulice, rozpadaj\u0105ce si\u0119 budynki i \u015Bmiertelnie niebezpieczne przeszkody.\nKa\u017Cdy
-    b\u0142\u0105d to krok bli\u017Cej ko\u0144ca. Ka\u017Cdy skok mo\u017Ce by\u0107
-    ostatni.\n\nNie zatrzymuj si\u0119. Kolce s\u0105 tu\u017C za Tob\u0105."
+  m_Text: "W tajnym laboratorium dosz\u0142o do awarii systemu bezpiecze\u0144stwa.
+    \n\nAktywowa\u0142 si\u0119 protok\xF3\u0142 autodestrukcji, a przez korytarze
+    zacz\u0119\u0142a przesuwa\u0107 si\u0119 kolczasta \u015Bciana maj\u0105ca zneutralizowa\u0107
+    wszelkie formy \u017Cycia. \n\nJako jeden z obiekt\xF3w testowych, masz tylko
+    jedno wyj\u015Bcie - biec przed siebie, ile si\u0142, zanim \u015Bciana ci\u0119
+    dogoni."
 --- !u!222 &1241357527
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -932,7 +928,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1872237871}
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: -2, y: 4, z: 10}
+  m_LocalPosition: {x: -3, y: 4, z: 10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

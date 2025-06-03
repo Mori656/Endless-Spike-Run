@@ -7,9 +7,12 @@ public class SpikeHit : MonoBehaviour
 {
     void OnTriggerEnter(Collider other)
     {
-        if(other.CompareTag("Player")){
+        if (other.CompareTag("Player"))
+        {
             Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
             SceneManager.LoadScene("DeathScene");
         }
+        
     }
 }
